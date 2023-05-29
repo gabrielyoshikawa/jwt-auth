@@ -27,5 +27,5 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 // Rotas
 app.get('*', checkUser);
 app.get('/', (req, res) => res.render('home'));
-app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
+app.get('/protected', requireAuth, (req, res) => res.render('protected'));
 app.use(authRouters);
